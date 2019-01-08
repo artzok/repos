@@ -471,7 +471,7 @@ public class AppUtils {
         return 1;
     }
 
-    private static NET_TYPE getNetworkType(final Context cxt) {
+    public static NET_TYPE getNetworkType(final Context cxt) {
         try {
             if (isWifiConnected(cxt)) return NET_TYPE.NET_WIFI;
             final TelephonyManager tm = (TelephonyManager) cxt
