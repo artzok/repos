@@ -25,10 +25,10 @@ dependencies {
     implementation "com.android.support:support-v4:${safeVersion("supportLibVersion", "28.0.0")}"
 }
 
-version = "0.0.1.190108"
+version = "0.0.2"
 group = "com.artzok.utils"
-def siteUrl = "https://github.com/artzok/AutoViewPager"
-def gitUrl = "https://github.com/artzok/AutoViewPager.git"
+def siteUrl = "https://github.com/artzok/repos"
+def gitUrl = "https://github.com/artzok/repos.git"
 
 install {
     repositories.mavenInstaller {
