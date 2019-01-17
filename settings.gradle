@@ -1,1 +1,1 @@
-include ':app', ':auto-view-pager', ':apputils'
+include ':app', ':auto-view-pager', ':apputils', ':downloader'

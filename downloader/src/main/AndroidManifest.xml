@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.artzok.downloader">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <permission android:name="com.badam.DOWNLOAD_SERVICE"/>
+    <permission android:name="com.badam.MSG_EVENT_RECEIVER"/>
+
+    <uses-permission android:name="com.badam.DOWNLOAD_SERVICE"/>
+    <uses-permission android:name="com.badam.MSG_EVENT_RECEIVER"/>
+
+    <application>
+
+        <service
+            android:name=".services.DownloadService"
+            android:exported="true"
+            android:permission="com.badam.DOWNLOAD_SERVICE"
+            android:process=".downloader">
+
+            <intent-filter>
+                <action android:name="com.ziipin.badam.DownloadService"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".receiver.MsgEventReceiver"
+            android:exported="true"
+            android:permission="com.badam.MSG_EVENT_RECEIVER">
+            <intent-filter>
+                <action android:name="com.ziipin.badam.MsgEventReceiver"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>
